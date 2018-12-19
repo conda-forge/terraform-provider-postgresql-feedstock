@@ -1,10 +1,10 @@
 {% set provider = "PostgreSQL" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.3" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "7906c3e3e9e78577a648a7587a0c4b0c9257982198b834fcbe67f75a851ef1b8" %}
+{% set sha256 = "2c5783a05325954f74eeeaa537bb9df2a87d58a6609fbd06f97320d3aa1344b6" %}
 {% set sha256_win64 = "0aa5174312d21f5b366871ab82b306576bec7aa68a1d151084456b65f9f98829" %}
 
 package:
@@ -20,7 +20,7 @@ source:
     sha256: {{ sha256_win64 }}  # [win64]
 
 build:
-  number: 1001
+  number: 1000
   script:
     - XCOPY src\github.com\terraform-providers\{{ name|lower }}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
