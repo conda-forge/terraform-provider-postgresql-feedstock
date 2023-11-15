@@ -26,7 +26,7 @@ requirements:
 
 test:
   requires:
-    - terraform >=1
+    - terraform ==1.2
 
   commands:
     # Create a sample init.tf loading the provider
