@@ -50,7 +50,7 @@ about:
   license_file: LICENSE
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/cyrilgdn/{{ name }}
 
 extra:
   recipe-maintainers:
