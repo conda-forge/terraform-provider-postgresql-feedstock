@@ -22,11 +22,11 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }} 1.18
+    - {{ compiler('go') }} 1.20
 
 test:
   requires:
-    - terraform ==1.2
+    - terraform >=1
 
   commands:
     # Create a sample init.tf loading the provider
