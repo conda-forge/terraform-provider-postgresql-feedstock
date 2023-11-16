@@ -1,6 +1,6 @@
 {% set provider = "PostgreSQL" %}
-{% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.7.1" %}
+{% set goname = "github.com/cyrilgdn/terraform-provider-"+provider.lower() %}
+{% set version = "1.21.0" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -13,16 +13,16 @@ package:
 
 source:
   url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  sha256: b097747cc8cfaa277f72c8a56550475e6c38b8c4959917be4a8052fc4b000460
+  sha256: 4e146fbf7d255b5ca7c0893e7db75e5e232badd71fee3eb70980b0bd3328cf5c
 
 build:
-  number: 1
+  number: 0
   script:
     - go build -v -o {{ target_gobin }}..{{ os.sep }}{{ plugin_dir }}{{ os.sep }}{{ target_goos }}_{{ target_goarch }}{{ os.sep }}{{ x4_plugin }}{{ target_goexe }}
 
 requirements:
   build:
-    - {{ compiler('go') }} 1.13
+    - {{ compiler('go') }} 1.20
 
 test:
   requires:
@@ -50,7 +50,7 @@ about:
   license_file: LICENSE
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/cyrilgdn/{{ name }}
 
 extra:
   recipe-maintainers:
