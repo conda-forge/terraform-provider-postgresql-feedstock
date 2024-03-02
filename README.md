@@ -9,7 +9,7 @@ Package license: MPL-2.0
 
 Summary: The Terraform PostgreSQL provider
 
-Development: https://github.com/terraform-providers/terraform-provider-postgresql
+Development: https://github.com/cyrilgdn/terraform-provider-postgresql
 
 Documentation: https://www.terraform.io/docs/providers/postgresql/index.html
 
