@@ -1,6 +1,6 @@
 {% set provider = "PostgreSQL" %}
 {% set goname = "github.com/cyrilgdn/terraform-provider-"+provider.lower() %}
-{% set version = "1.22.0" %}
+{% set version = "1.25.0" %}
 
 {% set name = goname.split('/')[-1] %}
 
