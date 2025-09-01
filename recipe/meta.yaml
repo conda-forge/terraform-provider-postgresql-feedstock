@@ -1,6 +1,6 @@
 {% set provider = "PostgreSQL" %}
 {% set goname = "github.com/cyrilgdn/terraform-provider-"+provider.lower() %}
-{% set version = "1.25.0" %}
+{% set version = "1.26.0" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  sha256: 2683b14757ed76561eb97b026568b18c41aaf76f6ee0dff106a98ccd5a8be620
+  sha256: 45ac0ff9d3e473f4a580f20a7585579e83eeffb3b86f5425f243a708f015c566
 
 build:
   number: 0
